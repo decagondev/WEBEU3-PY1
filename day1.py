@@ -100,8 +100,8 @@ print(d2['name'])
 
 # iterate over dict
 
-for key in elem:
-    print(f'{key} is {elem[key]}')
+for key in d2:
+    print(f'{key} is {d2[key]}')
 
 for (k, v) in d2.items():
     print(k)
