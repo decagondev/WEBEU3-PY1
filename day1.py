@@ -40,6 +40,70 @@ while i < len(lst2):
     print(lst2[i])
     i += 1
 
+# List Comprehensions
+
+# Create a new list containing the squares of all values in 'numbers'
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+
+squares = [n**2 for n in numbers]
+
+print(squares)
+
+squares = [num * num for num in numbers]
+squares = [1, 4, 9, 16, 25]
+
+print(squares)
+
+
+squares = []
+for num in numbers:
+    squares.append( num * num )
+
+print(squares)
+
+# Filtering with a list comprehension
+
+# create a new list of even numbers using the values of the numbers list as inputs
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+evens = [n for n in numbers if n % 2 == 0]
+
+print(evens)
+
+evens = []
+for n in numbers:
+    if n % 2 == 0:
+        evens.append(n)
+
+print(evens)
+
+# create a new list containing only the names that start with 's' make sure they are capitalized (regardless of their original case)
+
+names = ['Patrick', 'Melquisedeque', 'Bob', 'steve', 'Sam', 'frank', 'shawn']
+
+s_names = [name.capitalize() for name in names if name[0].lower() == 's']
+
+print(s_names)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
