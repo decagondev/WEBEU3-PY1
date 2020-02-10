@@ -87,6 +87,31 @@ s_names = [name.capitalize() for name in names if name[0].lower() == 's']
 print(s_names)
 
 
+# Dictionaries
+
+# Create a new dictionary
+d1 = dict()
+d1 = {}
+
+d2 = { 'name': 'Tom', 'age': 40 }
+
+# access an element via its key
+print(d2['name'])
+
+# iterate over dict
+
+for key in elem:
+    print(f'{key} is {elem[key]}')
+
+for (k, v) in d2.items():
+    print(k)
+    print(v)
+
+
+
+
+
+
 
 
 
