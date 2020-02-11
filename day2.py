@@ -75,17 +75,37 @@ def centered_avg1(ints):
     # return the sum divided by the length of ints minus 2
     return sum // (len(ints) - 2)
 
-# use the stastistics module to give us the mean method on a sorted list
+# use the statistics module to give us the mean method on a sorted list
+import statistics
+
+# import math for floor
+import math
 
 def centered_avg2(ints):
     # sort the ints
-    #
-    
-    pass
+    ints.sort() # fairly fast
+    # return the mean of a slice of the ints from the middle
+    return math.floor(statistics.mean(ints[1:-1])) # extremely slow
 
 numbers = [1, 41, 34, 29, 50, 50]
 
-print(centered_avg1(numbers))
+import time
+
+start = time.time()
+for i in range(1000):
+    centered_avg1(numbers)
+end = time.time()
+
+print(end - start)
+
+print("-----------------------")
+
+start = time.time()
+for i in range(1000):
+    centered_avg2(numbers)
+end = time.time()
+
+print(end - start)
 # a = 41 + 34 + 29 + 50
 # print(a)
 
