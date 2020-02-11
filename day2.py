@@ -2,15 +2,25 @@
 
 # define a doubling function that passes args by value
 def mult2(x):
-    pass
+    return x * 2
 
 # define a doubling function that passes args by reference
 def mult2_list(l):
-    pass
+    for i in range(len(l)):
+        l[i] *= 2
 
 
 # try out the functions
+a = 12
 
+new_number = mult2(a)
+print(new_number)
+
+lst = [2, 4, 6, 8] # mutable
+mult2_list(lst)
+
+for num in lst:
+    print(num)
 
 
 
